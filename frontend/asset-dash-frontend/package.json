@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "docker:build": "docker build -t asset-dash-frontend .",
+    "docker:run": "docker run -p 5173:5173 asset-dash-frontend",
+    "docker:start": "npm run docker:build && npm run docker:run"
   },
   "engines": {
     "node": ">=20.0.0"
